@@ -38,16 +38,19 @@
     <audio id="bgAudio" preload="auto"></audio>
   </div>
 
-  <button id="openCustomizerBtn" class="customizer-trigger-btn" title="Customize photos and settings locally">
+  <button id="openCustomizerBtn" class="customizer-trigger-btn" title="Customize photos and settings locally" disabled aria-disabled="true">
     ⚙️ Customize Live
   </button>
 
   <nav id="mainNav" class="main-nav hidden" aria-label="Primary Navigation">
     <div class="nav-content">
       <span class="nav-logo" id="navLogo">Forever & Always ❤️</span>
-      <ul class="nav-links">
+      <button id="navToggle" class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primaryLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="primaryLinks" class="nav-links">
         <li><a href="#hero">Start</a></li>
-        <li><a href="#story">Our Story</a></li>
+        <li><a href="#story">Story</a></li>
         <li><a href="#journey">Journey</a></li>
         <li><a href="#gifts">Gifts</a></li>
         <li><a href="#gallery">Memories</a></li>

@@ -46,10 +46,19 @@ Happy Birthday, my love. Today and every tomorrow, I'm right beside you.`,
     "Simply because you are unconditionally you."
   ],
 
+  qualities: [
+    "You make every room feel warmer just by being in it.",
+    "Your kindness is quiet, genuine, and impossible to forget.",
+    "You notice the little things that everyone else misses.",
+    "You are strong enough to face hard days and gentle enough to keep your heart soft.",
+    "Your honesty makes me feel safe to be completely myself.",
+    "You turn ordinary moments into memories I want to keep forever."
+  ],
+
   // Date-wise Relationship Journey Timeline
   journey: [
     {
-      date: "2020-05-28",
+      date: "2021-05-28",
       title: "The Day Our Paths Crossed",
       category: "beginning",
       icon: "✨",
@@ -59,7 +68,7 @@ Happy Birthday, my love. Today and every tomorrow, I'm right beside you.`,
       highlight: false
     },
     {
-      date: "2020-06-16",
+      date: "2021-06-16",
       title: "Our First Late-Night Call",
       category: "memory",
       icon: "📞",
@@ -69,7 +78,7 @@ Happy Birthday, my love. Today and every tomorrow, I'm right beside you.`,
       highlight: false
     },
     {
-      date: "2021-0227",
+      date: "2022-02-27",
       title: "The Day We Became Us",
       category: "relationship",
       icon: "💑",
@@ -212,6 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initFutureList();
   initMusicSystem();
   initModals();
+  initNavigation();
   initScrollAnimations();
 });
 
@@ -222,6 +232,25 @@ function applyPersonalization() {
   document.getElementById("senderSignature").textContent = `${CONFIG.senderName} ❤️`;
   document.getElementById("letterBody").textContent = CONFIG.loveLetter;
   document.getElementById("playerSongTitle").textContent = CONFIG.songTitle;
+}
+
+function initNavigation() {
+  const navToggle = document.getElementById("navToggle");
+  const navLinks = document.getElementById("primaryLinks");
+
+  navToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+    navToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+  });
+
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "Open navigation menu");
+    });
+  });
 }
 
 /**
@@ -578,22 +607,32 @@ function handleGiftClick(gift) {
       `;
       break;
 
+    case "qualities":
+      content.innerHTML = `
+        <h3>What Makes You Special</h3>
+        <p class="sub-help">The beautiful qualities I see in you every day.</p>
+        <ul class="qualities-list">
+          ${CONFIG.qualities.map(quality => `<li>${quality}</li>`).join("")}
+        </ul>
+      `;
+      break;
+
     case "gallery_shortcut":
     case "fav_photos":
-      document.querySelector("#gallery").scrollIntoView({ behavior: "smooth" });
-      return;
+      openSectionShortcut("gallery", "Open Our Favorite Memories", "Take a look at the moments that make our story sparkle.");
+      break;
 
     case "timeline_shortcut":
-      document.querySelector("#journey").scrollIntoView({ behavior: "smooth" });
-      return;
+      openSectionShortcut("journey", "Open Our Timeline", "Visit every milestone and memory in our journey together.");
+      break;
 
     case "future_shortcut":
-      document.querySelector("#future").scrollIntoView({ behavior: "smooth" });
-      return;
+      openSectionShortcut("future", "Open Our Future Adventures", "See all the beautiful plans still waiting for us.");
+      break;
 
     case "letter_shortcut":
-      document.querySelector("#letter").scrollIntoView({ behavior: "smooth" });
-      return;
+      openSectionShortcut("letter", "Open My Handwritten Letter", "A quieter place for everything I carry in my heart.");
+      break;
 
     case "finale_trigger":
       triggerGrandFinale();
@@ -604,6 +643,22 @@ function handleGiftClick(gift) {
   }
 
   modal.classList.remove("hidden");
+}
+
+function openSectionShortcut(sectionId, title, description) {
+  const content = document.getElementById("giftModalContent");
+  content.innerHTML = `
+    <div class="section-shortcut">
+      <span class="gold-badge">A LITTLE SHORTCUT</span>
+      <h3>${title}</h3>
+      <p>${description}</p>
+      <button class="btn-primary" id="openShortcutSection">Open This Gift</button>
+    </div>
+  `;
+  document.getElementById("openShortcutSection").addEventListener("click", () => {
+    document.getElementById("giftModal").classList.add("hidden");
+    document.getElementById(sectionId).scrollIntoView({ behavior: "smooth", block: "start" });
+  });
 }
 
 /**
