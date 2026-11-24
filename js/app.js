@@ -1,145 +1,137 @@
 /**
  * ============================================================================
- * ROMANTIC INTERACTIVE BIRTHDAY EXPERIENCE
+ * BEST SISTER EVER — INTERACTIVE BIRTHDAY EXPERIENCE
  * ============================================================================
- * Easily personalize your girlfriend's surprise below.
+ * Easily personalize your sister's surprise below.
  */
 
 const CONFIG = {
-  // Girlfriend's Details
-  girlfriendName: "Megha",
-  senderName: "Yours Forever",
-  
+  // Sister's Details
+  sisterName: "Behna",
+  senderName: "Your Bhai",
+
   // Important Dates (YYYY-MM-DD format)
-  birthdayDate: "2026-08-27 ",
-  relationshipStartDate: "2021-02-27",
+  birthdayDate: "2026-11-25",
+  metDate: "2019-06-25",
 
   // Music Settings (Provide your own audio file inside ./assets/music/)
-  songTitle: "Our Romantic Song",
-  songFile: "./assets/music/birthday-song.mp3", // Fallbacks gracefully to Web Audio synth if not present
+  songTitle: "Happy Birthday, Behna",
+  songFile: "./assets/music/birthday-song.mp3", // Falls back gracefully to Web Audio synth if not present
 
   // Secret Easter Egg Message (5 clicks on intro heart)
-  secretEasterEggMessage: "You noticed the little heart pulse! You have this uncanny superpower of noticing every tiny thing I do. I love you to pieces.",
+  secretEasterEggMessage: "Of course you found it. Nothing ever escapes you — not my secrets, not my excuses, not the last piece of chocolate. Best sister ever, officially certified. 🏆",
 
-  // Personal Love Letter
-  loveLetter: `From the very first conversation we had, I knew there was something profoundly different about you. You bring this effortless warmth, grace, and light into every single day.
+  // Personal Letter
+  loveLetter: `Ever since we met on 25th June 2019, life has had a lot more laughter, a lot more fights over silly things, and one more person always looking out for me.
 
-Thank you for laughing at my terrible jokes, for holding my hand when things get overwhelming, and for being my safest sanctuary in this busy world.
+Thank you for listening to my nonsense, for scolding me when I needed it, for defending me when I didn't deserve it, and for always being on my side no matter what.
 
-On your birthday, I want to remind you how deeply treasured, admired, and loved you are. I hope this year brings you all the dreams you hold closest to your heart.
+You are not just my sister — you are my best friend, my partner in crime, and the one person I can always count on.
 
-Happy Birthday, my love. Today and every tomorrow, I'm right beside you.`,
+On your birthday, I just want you to know how proud I am of you and how lucky I feel to have you. I hope this year brings you everything you've been wishing for, and a little extra.
 
-  // 12 Reasons Why I Love You (Expandable)
+Happy Birthday, Behna. Whatever happens, your Bhai is always right here.`,
+
+  // 12 Reasons Why You're The Best Sister Ever
   reasons: [
-    "The way your eyes light up when you're genuinely excited.",
-    "How safe and completely at home I feel whenever I hold you.",
-    "Your sweet, infectious laugh that turns my worst days around.",
-    "How deeply and thoughtfully you care about people.",
-    "The cute little habits you do when you think nobody is watching.",
-    "Because ordinary days feel like extraordinary adventures with you.",
-    "How you inspire me every single day to be a better person.",
-    "The warmth of your hand inside mine when we walk.",
-    "Because you are both my greatest love and my closest best friend.",
-    "The way you look at me when you think I don't notice.",
-    "Your incredible patience, kindness, and boundless empathy.",
-    "Simply because you are unconditionally you."
+    "You always know when something is wrong, even before I say a word.",
+    "You defend me in front of everyone — and then scold me in private.",
+    "Your laugh can fix even my worst day.",
+    "You give the best advice (even if I pretend not to listen).",
+    "You keep all my secrets safe. Mostly. 😏",
+    "Because every ordinary day becomes a story with you around.",
+    "You push me to become a better version of myself.",
+    "You share your food with me… sometimes.",
+    "You are my sister and my best friend, both at once.",
+    "You never let me feel alone, no matter how far we are.",
+    "Your patience with me deserves an award.",
+    "Simply because you are you — and nobody else could do this job."
   ],
 
-  // Date-wise Relationship Journey Timeline
+  // Date-wise Journey Timeline
   journey: [
     {
-      date: "2020-05-28",
-      title: "The Day Our Paths Crossed",
+      date: "2019-06-25",
+      title: "The Day We Met",
       category: "beginning",
       icon: "✨",
-      shortText: "The day destiny quietly changed my entire world forever.",
-      story: "We had no idea that a casual hello would turn into the most meaningful chapter of our lives.",
-      location: "Instagram",
-      highlight: false
-    },
-    {
-      date: "2020-06-16",
-      title: "Our First Late-Night Call",
-      category: "memory",
-      icon: "📞",
-      shortText: "We talked until 1 AM and neither of us wanted to hang up.",
-      story: "Time completely disappeared as we shared our favorite childhood memories, random secrets, and listened to each other laugh.",
-      location: "On Mute Video Call",
-      highlight: false
-    },
-    {
-      date: "2021-0227",
-      title: "The Day We Became Us",
-      category: "relationship",
-      icon: "💑",
-      shortText: "The official start of our beautiful forever.",
-      story: "Looking into your eyes, everything felt clear and effortless. Asking you to be mine was the easiest and best decision I ever made.",
-      location: "Krishna Cafe",
+      shortText: "The day I found the sister I never knew I needed.",
+      story: "25th June 2019 — the day it all started. Neither of us knew then that this would turn into one of the most special bonds of my life.",
+      location: "",
       highlight: true
     },
     {
-      date: "2022-06-11",
-      title: "Our First Spontaneous Meet",
-      category: "travel",
-      icon: "✈️",
-      shortText: "Exploring new horizons with my favorite love partner.",
-      story: "Getting lost together, sharing roadside pizza, giving you the ring, and meeting after 1 year.",
-      location: "Sawai Madhopur",
+      date: "2021-01-01",
+      title: "Endless Chats & Gossip",
+      category: "memory",
+      icon: "💬",
+      shortText: "Hours of talking about everything and nothing.",
+      story: "Random calls, late-night gossip sessions, and voice notes that were way too long. Every single one of them is a memory I treasure.",
+      location: "",
       highlight: false
     },
     {
-      date: "2023-02-12",
-      title: "The Impossible Meeting Fit",
+      date: "2023-01-01",
+      title: "The Fights That Made Us Closer",
       category: "funny",
       icon: "😂",
-      shortText: "When we meet hiding in mall.",
-      story: "We couldn't stop hiding over the mall little thing and your didi caught you but you escape.",
-      location: "Bhopal",
+      shortText: "We fight like cats, and make up in five minutes.",
+      story: "Silly arguments, dramatic silent treatments, and then instantly laughing about it. That's what siblings do best.",
+      location: "",
       highlight: false
+    },
+    {
+      date: "2026-11-25",
+      title: "Your Birthday, Today!",
+      category: "bond",
+      icon: "🎂",
+      shortText: "Seven years of us — and many more to go.",
+      story: "Another year of you being the best sister ever. Here's to every memory we've made since 2019, and all the ones still waiting for us.",
+      location: "",
+      highlight: true
     }
   ],
 
   // 12 Interactive Gifts Definitions
   gifts: [
-    { id: 1, title: "A Thousand Reasons", subtitle: "Tap the glowing heart", icon: "💖", type: "reasons" },
+    { id: 1, title: "Reasons You're The Best", subtitle: "Tap the glowing heart", icon: "💖", type: "reasons" },
     { id: 2, title: "Our Memory Reel", subtitle: "Our candid captures", icon: "📸", type: "gallery_shortcut" },
-    { id: 3, title: "Things I Love", subtitle: "Interactive flip cards", icon: "✨", type: "flipcards" },
-    { id: 4, title: "If You Were A…", subtitle: "Romantic comparisons", icon: "🌸", type: "metaphors" },
-    { id: 5, title: "Open When…", subtitle: "Letters for every mood", icon: "💌", type: "open_when" },
+    { id: 3, title: "Things I Love About You", subtitle: "Interactive flip cards", icon: "✨", type: "flipcards" },
+    { id: 4, title: "If You Were A…", subtitle: "Sister comparisons", icon: "🌸", type: "metaphors" },
+    { id: 5, title: "Open When…", subtitle: "Notes for every mood", icon: "💌", type: "open_when" },
     { id: 6, title: "Favorite Moments", subtitle: "Special highlights", icon: "⭐", type: "fav_photos" },
-    { id: 7, title: "Our Timeline", subtitle: "Every milestone we crossed", icon: "⏳", type: "timeline_shortcut" },
+    { id: 7, title: "Our Timeline", subtitle: "Every moment since 2019", icon: "⏳", type: "timeline_shortcut" },
     { id: 8, title: "What Makes You Special", subtitle: "Your unique qualities", icon: "💎", type: "qualities" },
-    { id: 9, title: "Our Future Adventures", subtitle: "Dreams yet to come", icon: "🗺️", type: "future_shortcut" },
-    { id: 10, title: "My Handwritten Letter", subtitle: "Everything in my heart", icon: "📜", type: "letter_shortcut" },
-    { id: 11, title: "My Birthday Wish For You", subtitle: "From the depths of my heart", icon: "🎂", type: "bday_wish" },
+    { id: 9, title: "Things To Do Together", subtitle: "Plans yet to come", icon: "🗺️", type: "future_shortcut" },
+    { id: 10, title: "A Letter From Bhai", subtitle: "Everything I never say", icon: "📜", type: "letter_shortcut" },
+    { id: 11, title: "My Birthday Wish For You", subtitle: "From the bottom of my heart", icon: "🎂", type: "bday_wish" },
     { id: 12, title: "The Grand Surprise", subtitle: "Your final gift", icon: "🎁", type: "finale_trigger" }
   ],
 
   // "Open When..." Messages
   openWhenMessages: [
-    { mood: "Open when you're missing me 🥺", text: "Close your eyes, place your hand on your heart, and remember I'm always only a phone call away. I miss you even more." },
-    { mood: "Open when you're feeling sad 🌧️", text: "You are stronger, braver, and more loved than you know. Whatever is heavy today will pass. I'm right here with you." },
-    { mood: "Open when you need a smile 😊", text: "Remember the time we laughed so hard we couldn't breathe? You have the world's most radiant smile. Don't hide it!" },
-    { mood: "Open when you're angry with me 🙈", text: "I'm sorry for being silly or annoying. I love you more than any disagreement. Can I make it up to you with food?" }
+    { mood: "Open when you miss your Bhai 🥺", text: "I'm only one call away. Call me — I'll even let you win the argument this time." },
+    { mood: "Open when you're feeling sad 🌧️", text: "You are stronger than you think, and you never have to face anything alone. Your Bhai has your back, always." },
+    { mood: "Open when you need a smile 😊", text: "Remember all the times we laughed until our stomachs hurt? There are a lot more of those coming. Smile, Behna!" },
+    { mood: "Open when you're angry with me 🙈", text: "Okay, okay, I'm sorry. Whatever it was, it was probably my fault. Can I fix it with your favourite food?" }
   ],
 
-  // Future Bucket List
+  // Future Plans
   futurePlans: [
-    { icon: "🌅", title: "Watch a Sunrise from a Mountain Peak", desc: "Wrap in warm blankets with hot cocoa and watch dawn break." },
-    { icon: "🍕", title: "Late Night 2 AM Pizza & Stargazing", desc: "No phones, just good food, cozy music, and counting shooting stars." },
-    { icon: "✈️", title: "Travel to an Unexplored Country", desc: "Get lost in historic streets and taste everything together." },
-    { icon: "🏠", title: "Build Our Dream Cozy Space", desc: "Fill a place with fairy lights, books, our photos, and endless warmth." }
+    { icon: "✈️", title: "A Sibling Trip Together", desc: "Just us, a long road, loud music and way too many snacks." },
+    { icon: "🍕", title: "Midnight Food Runs", desc: "Street food, ice cream and gossip until 2 AM." },
+    { icon: "🎉", title: "Celebrate Every Win Together", desc: "Your success, my success — we celebrate everything loudly." },
+    { icon: "🤝", title: "Always Being There", desc: "Every birthday, every milestone, every bad day — I'll be there." }
   ],
 
-  // High-Resolution Default Photos (Replace with your own in /assets/images/)
+  // Photos (Replace with your own in /assets/images/)
   photos: [
-    { url: "./assets/images/1.jpg", caption: "The smile that stole my heart ❤️" },
-    { url: "./assets/images/4.jpg", caption: "Every moment is magic with you ✨" },
-    { url: "./assets/images/2.jpg", caption: "Forever my favorite adventure partner ✈️" },
-    { url: "./assets/images/5.jpg", caption: "Radiant, stunning, and all mine ❤️" },
-    { url: "./assets/images/3.jpg", caption: "Just us against the world 🌙" },
-    { url: "./assets/images/6.jpg", caption: "To a lifetime of more memories 🥂" }
+    { url: "./assets/images/1.jpg", caption: "Best sister ever 💖" },
+    { url: "./assets/images/4.jpg", caption: "Partners in crime 😎" },
+    { url: "./assets/images/2.jpg", caption: "Memories I'll never forget ✨" },
+    { url: "./assets/images/5.jpg", caption: "That smile 😊" },
+    { url: "./assets/images/3.jpg", caption: "Siblings against the world 🌙" },
+    { url: "./assets/images/6.jpg", caption: "To many more memories 🥂" }
   ]
 };
 
@@ -154,8 +146,8 @@ let currentReasonIndex = 0;
 let easterEggClicks = 0;
 let currentLightboxIndex = 0;
 
-// Romantic Web Audio Synthesizer fallback melody
-function playRomanticSynthMelody() {
+// Web Audio Synthesizer fallback melody
+function playBirthdaySynthMelody() {
   if (synthPlaying) return;
   try {
     const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -163,7 +155,7 @@ function playRomanticSynthMelody() {
     audioCtx = new AudioContext();
     synthPlaying = true;
 
-    // Soft pentatonic romantic arpeggio notes (Hz)
+    // Soft pentatonic arpeggio notes (Hz)
     const melody = [261.63, 329.63, 392.00, 493.88, 523.25, 392.00, 329.63];
     let noteIdx = 0;
 
@@ -216,10 +208,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function applyPersonalization() {
-  document.querySelectorAll(".girlfriend-name-text").forEach(el => {
-    el.textContent = CONFIG.girlfriendName;
+  document.querySelectorAll(".sister-name-text").forEach(el => {
+    el.textContent = CONFIG.sisterName;
   });
-  document.getElementById("senderSignature").textContent = `${CONFIG.senderName} ❤️`;
+  document.getElementById("senderSignature").textContent = `${CONFIG.senderName} 💖`;
   document.getElementById("letterBody").textContent = CONFIG.loveLetter;
   document.getElementById("playerSongTitle").textContent = CONFIG.songTitle;
 }
@@ -352,19 +344,19 @@ function startAudio() {
   audio.play().then(() => {
     equalizer.classList.remove("paused");
   }).catch(() => {
-    // If local mp3 is not yet supplied by user, synthesize romantic melody
-    playRomanticSynthMelody();
+    // If local mp3 is not yet supplied, synthesize a soft melody
+    playBirthdaySynthMelody();
     equalizer.classList.remove("paused");
   });
 }
 
 /**
- * Countdown & Relationship Duration Calculator
+ * Countdown & Days-Since-We-Met Calculator
  */
 function initCountdownAndStats() {
   function updateTimer() {
     const now = new Date();
-    const bday = new Date(CONFIG.birthdayDate);
+    const bday = new Date(CONFIG.birthdayDate.trim() + "T00:00:00");
     
     // Set to current year
     bday.setFullYear(now.getFullYear());
@@ -391,8 +383,8 @@ function initCountdownAndStats() {
       document.getElementById("cdSeconds").textContent = String(seconds).padStart(2, "0");
     }
 
-    // Relationship Stats
-    const relStart = new Date(CONFIG.relationshipStartDate);
+    // Since-We-Met Stats
+    const relStart = new Date(CONFIG.metDate);
     const relDiff = Math.max(0, now - relStart);
     const totalDays = Math.floor(relDiff / (1000 * 60 * 60 * 24));
     const totalMonths = Math.floor(totalDays / 30.4375);
@@ -428,7 +420,7 @@ function initJourneyTimeline() {
       const durationStr = calculateRelativeTime(item.date);
 
       el.innerHTML = `
-        <div class="timeline-node">${item.icon || "❤️"}</div>
+        <div class="timeline-node">${item.icon || "💖"}</div>
         <div class="timeline-card">
           <div class="event-date-row">
             <span>📅 ${formattedDate}</span>
@@ -507,13 +499,13 @@ function handleGiftClick(gift) {
     case "reasons":
       content.innerHTML = `
         <div class="reason-tap-area">
-          <span class="gold-badge">REASONS I LOVE YOU</span>
+          <span class="gold-badge">REASONS YOU'RE THE BEST</span>
           <div class="reason-display-box">
             <span class="reason-number">Reason #${String(currentReasonIndex + 1).padStart(2, '0')}</span>
             <p class="reason-text" id="liveReasonText">"${CONFIG.reasons[currentReasonIndex]}"</p>
           </div>
           <div class="interactive-big-heart" id="tapHeartBtn">💖</div>
-          <p class="sub-help">Tap the heart for another reason ❤️</p>
+          <p class="sub-help">Tap the heart for another reason 💖</p>
         </div>
       `;
       document.getElementById("tapHeartBtn").addEventListener("click", () => {
@@ -529,7 +521,7 @@ function handleGiftClick(gift) {
         <h3>Things I Love About You</h3>
         <p class="sub-help">Tap each card to flip and discover.</p>
         <div class="flip-cards-grid">
-          ${["Your Smile ❤️", "Your Kindness 🌸", "Your Laugh 😂", "Your Heart 💖", "Your Voice 🎶", "Your Warmth ✨"].map((trait, i) => `
+          ${["Your Smile 😊", "Your Care 🌸", "Your Laugh 😂", "Your Big Heart 💖", "Your Advice 🧠", "Your Drama 🎭"].map((trait, i) => `
             <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
               <div class="flip-card-inner">
                 <div class="flip-front">Card #${i+1} 🎁</div>
@@ -545,10 +537,10 @@ function handleGiftClick(gift) {
       content.innerHTML = `
         <h3>If You Were A…</h3>
         <ul style="list-style: none; margin-top: 15px; display:flex; flex-direction:column; gap:12px;">
-          <li>🎵 <strong>A Song:</strong> You'd be my favorite melody on infinite repeat.</li>
-          <li>🏡 <strong>A Place:</strong> You'd be the safe home I always long to return to.</li>
-          <li>📱 <strong>A Notification:</strong> You'd be the only message that makes me instantly smile.</li>
-          <li>⭐ <strong>A Wish:</strong> You'd be the one that actually came true.</li>
+          <li>🎵 <strong>A Song:</strong> You'd be the one I can never skip.</li>
+          <li>🏡 <strong>A Place:</strong> You'd be home — loud, chaotic and the safest place ever.</li>
+          <li>📱 <strong>A Notification:</strong> You'd be the 47 missed calls I'm always happy to see.</li>
+          <li>🛡️ <strong>A Superhero:</strong> You'd be the one who saves me and then roasts me for it.</li>
         </ul>
       `;
       break;
@@ -573,7 +565,7 @@ function handleGiftClick(gift) {
         <div style="text-align: center; padding: 20px;">
           <span style="font-size: 3.5rem;">🎂</span>
           <h2 style="color: var(--gold); margin: 15px 0;">My Birthday Wish For You</h2>
-          <p style="font-size: 1.15rem; line-height: 1.7;">May your days be filled with effortless joy, peace, safety, and radiant adventures. May all your dreams unfold beautifully, and may you never doubt how deeply cherished you are.</p>
+          <p style="font-size: 1.15rem; line-height: 1.7;">May this year bring you endless happiness, good health, big wins and even bigger smiles. May every dream you have come true — and may you never forget that your Bhai is always cheering for you, loudest of all.</p>
         </div>
       `;
       break;
@@ -806,8 +798,8 @@ function initModals() {
   // Customizer Trigger
   const custModal = document.getElementById("customizerModal");
   document.getElementById("openCustomizerBtn").addEventListener("click", () => {
-    document.getElementById("custName").value = CONFIG.girlfriendName;
-    document.getElementById("custRelDate").value = CONFIG.relationshipStartDate;
+    document.getElementById("custName").value = CONFIG.sisterName;
+    document.getElementById("custRelDate").value = CONFIG.metDate;
     document.getElementById("custBdayDate").value = CONFIG.birthdayDate;
     custModal.classList.remove("hidden");
   });
@@ -816,8 +808,8 @@ function initModals() {
   // Customizer Live Form Submission
   document.getElementById("customizerForm").addEventListener("submit", (e) => {
     e.preventDefault();
-    CONFIG.girlfriendName = document.getElementById("custName").value || CONFIG.girlfriendName;
-    CONFIG.relationshipStartDate = document.getElementById("custRelDate").value || CONFIG.relationshipStartDate;
+    CONFIG.sisterName = document.getElementById("custName").value || CONFIG.sisterName;
+    CONFIG.metDate = document.getElementById("custRelDate").value || CONFIG.metDate;
     CONFIG.birthdayDate = document.getElementById("custBdayDate").value || CONFIG.birthdayDate;
 
     // Handle local song upload preview
@@ -833,7 +825,7 @@ function initModals() {
     if (photoFiles && photoFiles.length > 0) {
       CONFIG.photos = Array.from(photoFiles).map((file, i) => ({
         url: URL.createObjectURL(file),
-        caption: `Special Memory #${i+1} ❤️`
+        caption: `Special Memory #${i+1} 💖`
       }));
       initGallery();
     }
@@ -845,7 +837,7 @@ function initModals() {
   });
 
   document.getElementById("resetCustomizerBtn").addEventListener("click", () => {
-    localStorage.removeItem("romantic_birthday_cfg");
+    localStorage.removeItem("sister_birthday_cfg");
     location.reload();
   });
 }
@@ -882,11 +874,11 @@ function initScrollAnimations() {
 function saveDataLocally() {
   try {
     const dataToSave = {
-      girlfriendName: CONFIG.girlfriendName,
+      sisterName: CONFIG.sisterName,
       birthdayDate: CONFIG.birthdayDate,
-      relationshipStartDate: CONFIG.relationshipStartDate
+      metDate: CONFIG.metDate
     };
-    localStorage.setItem("romantic_birthday_cfg", JSON.stringify(dataToSave));
+    localStorage.setItem("sister_birthday_cfg", JSON.stringify(dataToSave));
   } catch(e) {
     console.warn("Storage not available:", e);
   }
@@ -894,12 +886,12 @@ function saveDataLocally() {
 
 function loadSavedData() {
   try {
-    const saved = localStorage.getItem("romantic_birthday_cfg");
+    const saved = localStorage.getItem("sister_birthday_cfg");
     if (saved) {
       const parsed = JSON.parse(saved);
-      if (parsed.girlfriendName) CONFIG.girlfriendName = parsed.girlfriendName;
+      if (parsed.sisterName) CONFIG.sisterName = parsed.sisterName;
       if (parsed.birthdayDate) CONFIG.birthdayDate = parsed.birthdayDate;
-      if (parsed.relationshipStartDate) CONFIG.relationshipStartDate = parsed.relationshipStartDate;
+      if (parsed.metDate) CONFIG.metDate = parsed.metDate;
     }
   } catch(e) {
     console.warn("Could not load local storage data:", e);
